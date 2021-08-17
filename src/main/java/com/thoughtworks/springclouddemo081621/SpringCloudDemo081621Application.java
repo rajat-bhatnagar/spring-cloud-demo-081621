@@ -13,8 +13,12 @@ public class SpringCloudDemo081621Application {
         SpringApplication.run(SpringCloudDemo081621Application.class, args);
     }
 
-    public Function<Message<String>, String> getMessageStringFunction() {
+    public Function<Message<String>, String> uppercase() {
         return input -> input.getPayload().toUpperCase();
+    }
+
+    public Function<Message<String>, String> lowercase() {
+        return input -> input.getPayload().toLowerCase();
     }
 
 }
